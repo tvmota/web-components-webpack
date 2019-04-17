@@ -31,8 +31,7 @@ class AppMain extends LitElement {
       <div class="main-container" part="container">
         <app-header></app-header>
         <main class="main-content" part="content">
-          <p>main</p>
-          <app-button></app-button>
+          
         </main>
         <app-footer></app-footer>
       </div>

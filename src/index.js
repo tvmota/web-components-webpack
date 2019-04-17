@@ -19,13 +19,13 @@ import PageNotFound from './components/common/pageNotFound/PageNotFound'
 import { Router } from '@vaadin/router'
 import { routes } from './Routes/'
 
-import baseStyles from './assets/css/style.styl'
+import baseStyles from './assets/css/style.scss'
 
 document.querySelector('#baseStyle').textContent = baseStyles.toString()
 
 customElements.define('app-main', AppMain)
 customElements.define('page-not-found', PageNotFound)
 
-const router = new Router(document.querySelector('#app'))
+const router = new Router(document.getElementById('app'), {baseUrl: '/'})
 
 router.setRoutes(routes)

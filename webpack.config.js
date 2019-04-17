@@ -11,6 +11,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
+    stats: 'minimal',
     compress: true,
     port: 9000
   },
@@ -25,11 +27,18 @@ module.exports = {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
       },
-      {
+      /*{
         test: /\.styl$/,
         use: [ 
           { loader:'css-loader', options: { modules: true } },
           { loader:'stylus-loader' }
+        ]
+      },*/
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'css-loader', options: { modules: true } },
+          { loader: 'sass-loader' }
         ]
       }
     ]
@@ -37,7 +46,7 @@ module.exports = {
   plugins: [
     new CleanPlugin(),
     new HtmlWebPackPlugin({
-      template: "./index.html",
+      template: "./src/index.html",
       filename: "./index.html"
     }),
     new CopyPlugin([

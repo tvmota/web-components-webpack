@@ -1,0 +1,16 @@
+@import '../../../assets/css/_utilities/_imports';
+
+.content {
+  align-items: center;
+  color: $color-gray;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+
+  &-title{
+    margin: 0 0 pxToRem(8);
+  }
+}

@@ -16,4 +16,4 @@ $ npm run dev
 - WebComponents(recomendado): [LitElement](https://lit-element.polymer-project.org)
 - Bundler: [Webpack](https://webpack.js.org)
 - Transpiler: [Babel](https://babeljs.io)
-- Pre-Processador: [Stylus](https://stylus-lang.com)
+- Pre-Processador: [SASS](https://sass-lang.com)

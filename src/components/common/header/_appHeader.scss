@@ -1,0 +1,10 @@
+@import '../../../assets/css/_utilities/_imports';
+
+.app-header{
+  background-color: $color-header;
+  color: $color-gray;
+  display: flex;
+  flex: none;
+  font-size: pxToRem(16);
+  padding-left: pxToRem(8);
+}

@@ -1,0 +1,12 @@
+@import '../../../assets/css/_utilities/_imports';
+
+.app-footer {
+  background: $color-gray;
+  color: $color-white;
+  display: flex;
+  flex: none;
+  font-weight: 900;
+  padding: pxToRem(10) pxToRem(32);
+  justify-content: flex-end;
+}
+  

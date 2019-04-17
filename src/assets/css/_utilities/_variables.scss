@@ -1,0 +1,12 @@
+@import '../../../../node_modules/materialize-css/sass/components/_color-variables.scss';
+
+$basefontsize: 16px;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray: color('grey', 'lighten-1');
+$color-header: color('blue-grey', 'darken-3');
+
+:root {
+  --bg-dark: $color-header;
+  --font-light: $color-gray;
+}
