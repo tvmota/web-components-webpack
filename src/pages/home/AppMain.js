@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit-element'
-import { AppHeader } from '../../components/common/header/AppHeader'
-import { AppFooter } from '../../components/common/footer/AppFooter'
+import '../../components/common/header/AppHeader.js'
+import '../../components/common/footer/AppFooter.js'
 
 class AppMain extends LitElement {
   render () {

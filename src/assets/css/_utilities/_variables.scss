@@ -5,6 +5,7 @@ $color-black: #000000;
 $color-white: #ffffff;
 $color-gray: color('grey', 'lighten-1');
 $color-header: color('blue-grey', 'darken-3');
+$fa-font-path: '../../webfonts';
 
 :root {
   --bg-dark: $color-header;
