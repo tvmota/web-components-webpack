@@ -38,7 +38,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           { loader: 'css-loader', options: { modules: true } },
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader', options: { includePaths: ['./node_modules'] } }
         ]
       },
       {

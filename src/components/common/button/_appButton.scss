@@ -1,0 +1,30 @@
+@import '@material/button/mdc-button';
+@import '../../../assets/css/_utilities/_variables';
+
+.primary {
+  @extend .mdc-button;
+  @include mdc-button-ink-color($color-header);
+
+  &-raised {
+    @include mdc-button-container-fill-color($color-header);
+    @include mdc-button-ink-color($color-white);
+    @extend .mdc-button--raised;
+  }
+
+  &-unelevated {
+    @include mdc-button-container-fill-color($color-header);
+    @include mdc-button-ink-color($color-white);
+    @extend .mdc-button--outlined;
+  }
+
+  &-outline {
+    @include mdc-button-outline-color($color-header);
+    @include mdc-button-ink-color($color-header);
+    @extend .mdc-button;
+    @extend .mdc-button--outlined;
+  }
+
+  &--rounded {
+    @include mdc-button-shape-radius(2rem, false);
+  }
+}

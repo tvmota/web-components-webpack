@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit-element'
 import '../../components/common/header/AppHeader.js'
 import '../../components/common/footer/AppFooter.js'
+import '../../components/common/button/AppButton.js'
 
 class AppMain extends LitElement {
   render () {
@@ -31,7 +32,7 @@ class AppMain extends LitElement {
       <div class="main-container" part="container">
         <app-header></app-header>
         <main class="main-content" part="content">
-          
+          <app-button></app-button>
         </main>
         <app-footer></app-footer>
       </div>

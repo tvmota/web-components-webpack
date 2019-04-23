@@ -1,0 +1,30 @@
+@import '../_utilities/_functions';
+
+.icone {
+  transition: transform .2s linear, fill .2s linear;
+
+  &-xsm {
+    height: pxToRem(12);
+    width: pxToRem(12);
+  }
+
+  &-sm {
+    height: pxToRem(16);
+  	width: pxToRem(16);
+  }
+
+  &-md {
+    height: pxToRem(24);
+  	width: pxToRem(24);
+  }
+
+  &-lg {
+    height: pxToRem(32);
+  	width: pxToRem(32);
+  }
+
+  &-xl {
+    height: pxToRem(48);
+  	width: pxToRem(48);
+  }
+}

@@ -1,4 +1,5 @@
 @import '../../../assets/css/_utilities/_imports';
+@import '../../../assets/css/_modules/_icons';
 
 .app-header{
   background-color: $color-header;
@@ -6,5 +7,18 @@
   display: flex;
   flex: none;
   font-size: pxToRem(16);
-  padding-left: pxToRem(8);
+  padding-left: pxToRem(10);
+
+  &-icone {
+    @extend .icone;
+    @extend .icone-xl;
+    
+    display: inline-block;
+    margin: 0;
+    padding: pxToRem(10);
+  }
+
+  &-title {
+    margin-left: pxToRem(14);
+  }
 }
