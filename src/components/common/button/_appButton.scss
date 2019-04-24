@@ -3,23 +3,51 @@
 
 .primary {
   @extend .mdc-button;
-  @include mdc-button-ink-color($color-header);
+  @include mdc-button-ink-color($color-primary);
 
   &-raised {
-    @include mdc-button-container-fill-color($color-header);
-    @include mdc-button-ink-color($color-white);
+    @include mdc-button-container-fill-color($color-primary);
+    @include mdc-button-ink-color($color-primary-text);
     @extend .mdc-button--raised;
   }
 
   &-unelevated {
-    @include mdc-button-container-fill-color($color-header);
-    @include mdc-button-ink-color($color-white);
+    @include mdc-button-container-fill-color($color-primary);
+    @include mdc-button-ink-color($color-primary-text);
     @extend .mdc-button--outlined;
   }
 
   &-outline {
-    @include mdc-button-outline-color($color-header);
-    @include mdc-button-ink-color($color-header);
+    @include mdc-button-outline-color($color-primary);
+    @include mdc-button-ink-color($color-primary);
+    @extend .mdc-button;
+    @extend .mdc-button--outlined;
+  }
+
+  &--rounded {
+    @include mdc-button-shape-radius(2rem, false);
+  }
+}
+
+.secondary {
+  @extend .mdc-button;
+  @include mdc-button-ink-color($color-secondary);
+
+  &-raised {
+    @include mdc-button-container-fill-color($color-secondary);
+    @include mdc-button-ink-color($color-secondary-text);
+    @extend .mdc-button--raised;
+  }
+
+  &-unelevated {
+    @include mdc-button-container-fill-color($color-secondary);
+    @include mdc-button-ink-color($color-secondary-text);
+    @extend .mdc-button--outlined;
+  }
+
+  &-outline {
+    @include mdc-button-outline-color($color-secondary);
+    @include mdc-button-ink-color($color-secondary);
     @extend .mdc-button;
     @extend .mdc-button--outlined;
   }

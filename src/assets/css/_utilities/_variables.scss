@@ -2,9 +2,21 @@ $basefontsize: 16px;
 $color-black: #000000;
 $color-white: #ffffff;
 $color-gray: #BDBDBD;
-$color-header: #455A64;
+
+$color-primary: #546e7a;
+$color-primary-light: #819ca9;
+$color-primary-dark: #29434e;
+$color-primary-text: #ffffff;
+$color-secondary: #c5cae9;
+$color-secondary-light: #f8fdff;
+$color-secondary-dark: #9499b7;
+$color-secondary-text: #000000;
+$color-error: #8e0000;
+$color-success: #2e7d32;
+$color-info: #4db6ac;
+
 
 :root {
   --bg-dark: $color-header;
-  --font-light: $color-gray;
+  --font-light: $color-primary;
 }

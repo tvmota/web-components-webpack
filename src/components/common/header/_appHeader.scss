@@ -2,8 +2,8 @@
 @import '../../../assets/css/_modules/_icons';
 
 .app-header{
-  background-color: $color-header;
-  color: $color-gray;
+  background-color: $color-primary;
+  color: $color-primary-text;
   display: flex;
   flex: none;
   font-size: pxToRem(16);
@@ -12,7 +12,7 @@
   &-icone {
     @extend .icone;
     @extend .icone-xl;
-    
+
     display: inline-block;
     margin: 0;
     padding: pxToRem(10);

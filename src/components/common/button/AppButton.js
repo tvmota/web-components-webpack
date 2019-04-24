@@ -3,15 +3,35 @@ import styles from './_appButton.scss'
 
 class AppButton extends LitElement {
   static get properties() {
-    btnType: { type: String },
-    btnRaised: { type: String }
+    return {
+      btnType: { type: String },
+      btnVariant: { type: String },
+      btnLabel: { type: String }
+    }
+  }
+
+  constructor() {
+    super()
+    this.btnType = 'button'
+    this.btnStyle = 'primary'
+    this.btnVariant = 'primary-raised'
+    this.btnLabel = 'button'
+    this.btnTitle = `button${Math.floor(Math.random() * 100)}`
+  }
+
+  handleClick() {
+    this.dispatchEvent(new CustomEvent('btn-click', {detail: 'botao click'}))
   }
 
   render() {
     return html `
       <style>${styles.toString()}</style>
-      <button class="${styles.locals['primary']} ${styles.locals['primary-raised']}">
-        <span class="${styles.locals['app-button-label']}">teste</span>
+      <button
+        @click="${this.handleClick}"
+        class="${styles.locals[this.btnStyle]} ${styles.locals[this.btnStyle + '-' + this.btnVariant]}" 
+        title="${this.btnTitle}" 
+        type="${this.btnType}">
+          <span class="${styles.locals['mdc-button__label']}">${this.btnLabel}</span>
       </button>
     `
   }

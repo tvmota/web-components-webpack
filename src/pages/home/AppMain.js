@@ -4,6 +4,10 @@ import '../../components/common/footer/AppFooter.js'
 import '../../components/common/button/AppButton.js'
 
 class AppMain extends LitElement {
+  btnClick(evt) {
+    console.log(evt)
+  }
+
   render () {
     return html `
       <style>
@@ -32,7 +36,7 @@ class AppMain extends LitElement {
       <div class="main-container" part="container">
         <app-header></app-header>
         <main class="main-content" part="content">
-          <app-button></app-button>
+          <app-button @btn-click="${this.btnClick}" btnStyle="secondary" btnVariant="outline" btnLabel="Teste1"></app-button>
         </main>
         <app-footer></app-footer>
       </div>
