@@ -3,12 +3,17 @@ import '../../components/common/header/AppHeader.js'
 import '../../components/common/footer/AppFooter.js'
 import '../../components/common/button/AppButton.js'
 
+import { Store } from '../../store'
+import { updateShows } from '../../actions'
+
 class AppMain extends LitElement {
   btnClick(evt) {
+    Store.dispatch(updateShows([1,2,3,4,5]))
     console.log(evt)
   }
 
   render () {
+    Store.subscribe(() => console.log(Store.getState()))
     return html `
       <style>
         .main-container {

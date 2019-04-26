@@ -14,6 +14,7 @@ $ npm run dev
 - Routeamento: [Vaadin Router](https://vaadin.com/router)
 - WebComponents: nativo
 - WebComponents(recomendado): [LitElement](https://lit-element.polymer-project.org)
+- State Management: [Redux](https://redux.js.org)
 - Bundler: [Webpack](https://webpack.js.org)
 - Transpiler: [Babel](https://babeljs.io)
 - Pre-Processador: [SASS](https://sass-lang.com)
