@@ -3,45 +3,43 @@ import '../../components/common/header/AppHeader.js'
 import '../../components/common/footer/AppFooter.js'
 import '../../components/common/button/AppButton.js'
 
+//Redux
 import { Store } from '../../store'
 import { updateShows } from '../../actions'
 
+//Api
+import { listMovies } from '../../services/MovieService'
+
+import styles from '../../assets/css/_modules/_container.scss'
+
 class AppMain extends LitElement {
   btnClick(evt) {
-    Store.dispatch(updateShows([1,2,3,4,5]))
     console.log(evt)
+  }
+
+  firstUpdated() {
+    Store.dispatch(updateShows([]))
+    listMovies()
+      .then(resp => {
+        Store.dispatch(updateShows(resp.results))
+      }).catch(err => console.error(err))
   }
 
   render () {
     Store.subscribe(() => console.log(Store.getState()))
+    //<!--app-button @btn-click="${this.btnClick}" btnStyle="secondary" btnVariant="outline" btnLabel="Teste1"></app-button-->
     return html `
-      <style>
-        .main-container {
-          display:flex;
-          flex-direction: column;
-          height: 100vh;
-        }
-
-        .main-content {
-          display: flex;
-          flex-direction: column;
-          flex: 1 0 auto;
-          padding: 1.5rem 1.5rem 0;
-          width: calc(100% - 3rem);
-        }
-
-        .main-content::after {
-          content: '';
-          display: block;
-          margin-top: 1.5rem;
-          height: 0;
-          visibility: hidden;
-        }
-      </style>
-      <div class="main-container" part="container">
+      <style>${styles.toString()}</style>
+      <div class="${styles.locals['main-container']}">
         <app-header></app-header>
-        <main class="main-content" part="content">
-          <app-button @btn-click="${this.btnClick}" btnStyle="secondary" btnVariant="outline" btnLabel="Teste1"></app-button>
+        <main class="${styles.locals['main-container-content']}">
+          <div class="${styles.locals['mdc-layout-grid']}">
+            <div class="${styles.locals['mdc-layout-grid__inner']}">
+              <div class="${styles.locals['mdc-layout-grid__cell--span-12']}">1</div>
+              <div class="${styles.locals['mdc-layout-grid__cell']}">2</div>
+              <div class="${styles.locals['mdc-layout-grid__cell']}">3</div>
+            </div>
+          </div>
         </main>
         <app-footer></app-footer>
       </div>

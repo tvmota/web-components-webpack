@@ -1,22 +1,27 @@
-.container {
+@import "@material/layout-grid/mdc-layout-grid";
+
+.main-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-}
 
-.content {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
-  padding: 1.5rem 1.5rem 0;
-  width: calc(100% - 3rem);
+  &-content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem 0;
+    width: calc(100% - 3rem);
 
-  &::after {
-    content: '\00a0';
-    display: block;
-    margin-top: 1.5rem;
-    height: 0;
-    visibility: hidden;
+    &::after {
+      content: '\00a0';
+      display: block;
+      margin-top: 1.5rem;
+      height: 0;
+      visibility: hidden;
+    }
   }
 }
   
+.grid {
+  @extend .mdc-layout-grid;
+}
